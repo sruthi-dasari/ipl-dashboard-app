@@ -1,1 +1,52 @@
-/* Write your CSS here */
+.team-matches-container {
+  padding: 20px;
+  background-color: darkred;
+}
+
+.team-banner {
+  height: 100px;
+  width: 300px;
+}
+
+.latest-matches-heading {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: 'Bree Serif';
+  font-weight: 500;
+}
+
+.match-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+
+.red-yellow-black {
+  background-image: linear-gradient(to bottom, #a4261d, #f7db00, #1e293b);
+}
+
+.purple-yellow {
+  background-image: linear-gradient(to bottom, #5755a7, #f7db00);
+}
+.red-grey {
+  background-image: linear-gradient(to bottom, #a4261d, #1e293b);
+}
+.yellow-blue {
+  background-image: linear-gradient(to bottom, #f7db00, #1e293b);
+}
+
+.pink-blue {
+  background-image: linear-gradient(to bottom, #da237b, #13418b);
+}
+.blue-yellow {
+  background-image: linear-gradient(to bottom, #13418b, #f7db00);
+}
+
+.orange-black {
+  background-image: linear-gradient(to bottom, #f26d22, #1e293b);
+}
+.red-darkblue {
+  background-image: linear-gradient(to bottom, #13418b, #a4261d);
+}

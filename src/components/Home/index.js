@@ -7,7 +7,7 @@ import TeamCard from '../TeamCard'
 class Home extends Component {
   state = {
     isLoading: true,
-    teamsData: [],
+    teamsData: {},
   }
 
   componentDidMount() {
@@ -17,10 +17,12 @@ class Home extends Component {
   getTeamsData = async () => {
     const response = await fetch('https://apis.ccbp.in/ipl')
     const statusCode = await response.statusCode
-    console.log(statusCode)
-    const data = await response.json()
+    // console.log(statusCode)
 
-    const formattedData = data.map(eachItem => ({
+    const data = await response.json()
+    // console.log(data)
+
+    const formattedData = data.teams.map(eachItem => ({
       name: eachItem.name,
       id: eachItem.id,
       teamImageUrl: eachItem.team_image_url,
@@ -31,7 +33,7 @@ class Home extends Component {
 
   render() {
     const {isLoading, teamsData} = this.state
-    console.log(isLoading)
+    // console.log(isLoading)
 
     return (
       <div className="app-container">
@@ -44,8 +46,10 @@ class Home extends Component {
           <h1 className="main-heading">IPL Dashboard</h1>
         </div>
 
+        {/* testid="loader" */}
+
         {isLoading ? (
-          <div>
+          <div testid="loader">
             <Loader type="Oval" color="#ffffff" height={50} width={50} />
           </div>
         ) : (
